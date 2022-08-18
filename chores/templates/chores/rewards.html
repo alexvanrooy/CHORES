@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'chores/style_home.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHORES - Rewards</title>
+</head>
+<body>
+    <header>
+        <ul>
+            <li style="float:left"><a href="{% url 'chores:index' %}">CHORES</a></li>
+            <li><a href="{% url 'chores:logout' %}">Logout</a></li>
+        </ul>
+    </header>
+
+    <h1>Rewards</h1>
+
+    <div class="div-body">
+        {% for reward in rewards %}
+        <div class = "div-content" style="display: flex">
+            <div class = "left-div">
+                <h5>{{reward.reward_title}}</h5>
+                <p class = "task-desc">{{reward.reward_description}}</p>
+                <p>Cost: {{reward.reward_cost}}</p>
+            </div>
+            <div class = "right-div">
+                <a href="delete/{{reward.id}}"><img src="{% static 'chores/images/delete_icon.png' %}" alt="" style="width: 20px; height: auto"></a>
+            </div>
+        </div>
+        {% endfor %}
+
+
+    </div>
+
+
+</body>
+        
+    

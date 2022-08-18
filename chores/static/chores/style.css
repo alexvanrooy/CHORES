@@ -1,0 +1,124 @@
+:root {
+  --white: #f4f3ee;
+  --light_grey: #bcb8b1;
+  --dark_grey: #8a817c;
+  --black: #1b1917;
+}
+
+body {
+  background-color: var(--white);
+  font-family: "Montserrat", sans-serif;
+  color: var(--black);
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  margin: auto;
+  width: 66%;
+  text-align: center;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header h1 {
+  margin: 0;
+}
+header p {
+  margin: 0;
+  text-decoration: overline;
+}
+
+.account {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.account ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+.account .button-3d {
+  padding: 1rem;
+  text-decoration: none;
+  color: var(--black);
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: var(--light_grey);
+  border-radius: 10px;
+  margin: 2px;
+  transition: all 0.1s;
+  box-shadow: 0px 6px 0px var(--dark_grey);
+}
+.account .button-3d:active {
+  box-shadow: 0px 2px 0px var(--dark_grey);
+  position: relative;
+  top: 4px;
+}
+
+/*
+.heading{
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: var(--light_grey);
+      }
+
+      li {
+        float: right;
+      }
+
+      li a {
+        display: block;
+        font-weight: bold;
+        color: var(--black);
+        text-align: center;
+        padding: 10px 14px;
+        text-decoration: none;
+      }
+
+      li a:hover{
+        background-color: var(--dark_grey);
+      }
+}
+
+.error-message{
+    color: rgba(255, 57, 57, 0.922);
+}
+
+
+.registration{
+    margin-left: 1em;
+    input[type=submit]{
+        border: none;
+        cursor: pointer;
+        font: inherit;
+        background-color: var(--light_grey);
+        border-radius: 10px;
+
+        -webkit-transition: all 0.1s;
+        -moz-transition: all 0.1s;
+        transition: all 0.1s;
+
+        -webkit-box-shadow: 0px 4px 0px var(--dark_grey);
+        -moz-box-shadow: 0px 4px 0px var(--dark_grey);
+        box-shadow: 0px 4px 0px var(--dark_grey);
+    }
+
+    input[type=submit]:active{
+        -webkit-box-shadow: 0px 1px 0px var(--dark_grey);
+        -moz-box-shadow: 0px 1px 0px var(--dark_grey);
+        box-shadow: 0px 1px 0px var(--dark_grey);
+        position:relative;
+        top:3px;
+    }
+}
+*//*# sourceMappingURL=style.css.map */

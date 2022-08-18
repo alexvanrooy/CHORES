@@ -1,0 +1,72 @@
+:root{
+    --white: #f4f3ee;
+    --light_grey: #bcb8b1;
+    --dark_grey: #8a817c;
+    --black: #1b1917;
+}
+
+.error-message{
+    color: rgba(255, 57, 57, 0.922);
+}
+
+body {
+    background-color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    color: var(--black);
+    margin: 0;
+    padding: 0;
+}
+
+.heading{
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: var(--light_grey);
+      }
+      
+      li {
+        float: right;
+      }
+      
+      li a {
+        display: block;
+        font-weight: bold;
+        color: var(--black);
+        text-align: center;
+        padding: 10px 14px;
+        text-decoration: none;
+      }
+
+      li a:hover{
+        background-color: var(--dark_grey);
+      }
+}
+
+.registration{
+    margin-left: 1em;
+    input[type=submit]{
+        border: none;
+        cursor: pointer;
+        font: inherit;
+        background-color: var(--light_grey);
+        border-radius: 10px;
+
+        -webkit-transition: all 0.1s;
+        -moz-transition: all 0.1s;
+        transition: all 0.1s;
+      
+        -webkit-box-shadow: 0px 4px 0px var(--dark_grey);
+        -moz-box-shadow: 0px 4px 0px var(--dark_grey);
+        box-shadow: 0px 4px 0px var(--dark_grey);
+    }
+
+    input[type=submit]:active{
+        -webkit-box-shadow: 0px 1px 0px var(--dark_grey);
+        -moz-box-shadow: 0px 1px 0px var(--dark_grey);
+        box-shadow: 0px 1px 0px var(--dark_grey);
+        position:relative;
+        top:3px;
+    }
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'chores/style_form.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHORES - Household Creation</title>
+</head>
+
+
+<body>
+
+    <div class="heading">
+        <ul>
+            <li style="float:left"><a href="{% url 'chores:index' %}">CHORES</a></li>
+        </ul>
+    </div>
+
+    <div class = "registration">
+        <h1>Create a Household</h1>
+        <form action="{% url 'chores:createhouse' %}" method="post">
+            {% csrf_token %}
+            <label for="house_name">House Name: </label>
+            <input id = "house_name" type="text" name = "house_name">
+            <input type="submit" value="Create Household">
+        </form>
+    </div>
+    
+</body>
+</html>

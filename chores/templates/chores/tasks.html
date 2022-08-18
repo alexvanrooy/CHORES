@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'chores/style_home.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHORES - Tasks</title>
+</head>
+<body>
+    <header>
+        <ul>
+            <li style="float:left"><a href="{% url 'chores:index' %}">CHORES</a></li>
+            <li><a href="{% url 'chores:logout' %}">Logout</a></li>
+        </ul>
+    </header>
+
+    <h1>Tasks</h1>
+
+    <div class="div-body">
+        {% for task in tasks %}
+        <div class = "div-content" style="display: flex">
+            <div class = "left-div">
+                <h5>{{task.task_title}}</h5>
+                <p class = "task-desc">{{task.task_description}}</p>
+                <p>Reward: {{task.task_reward}}</p>
+                <p>Task status: {{task.task_status}}</p>
+            </div>
+            <div class = "right-div">
+                <a href="delete/{{task.id}}"><img src="{% static 'chores/images/delete_icon.png' %}" alt="" style="width: 20px; height: auto"></a>
+            </div>
+        </div>
+        {% endfor %}
+
+
+    </div>
+
+
+</body>
+        
+    
